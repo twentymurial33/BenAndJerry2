@@ -29,11 +29,11 @@ var icecreams = [
 app.get("/icecreams/:name", function(req, res) {
     for (var i = 0; i < icecreams.length; i++) {
       if (icecreams[i].name === req.params.name) {
-        return res.render("icecream", icecreams[i]);
+        return res.render("icecreams", icecreams[i]);
       }
     }
 });
-    app.get("/icecreams", function(req, res) {
+    app.get("/icecreams/:awesomeness", function(req, res) {
         res.render("ics", { ics: icecreams });
       });
       
